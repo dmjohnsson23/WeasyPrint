@@ -119,7 +119,7 @@ def gather_anchors(box, anchors, links, bookmarks, forms, parent_matrix=None,
             bookmark = (bookmark_level, bookmark_label, (pos_x, pos_y), state)
             bookmarks.append(bookmark)
         if has_anchor:
-            anchors[anchor_name] = pos_x, pos_y
+            anchors[anchor_name] = (pos_x, pos_y, width, height)
 
     for child in box.all_children():
         gather_anchors(child, anchors, links, bookmarks, forms, matrix, parent_form)
