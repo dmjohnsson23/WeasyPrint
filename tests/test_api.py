@@ -884,7 +884,7 @@ def test_links_1():
         ],
         [('internal', 'hello', (0, 0, 200, 30))],
     ], [
-        {'hello': (0, 200, 200, 90)},
+        {'hello': (0, 200, 200, 290)},
         {'lipsum': (0, 0, 200, 90)}
     ], [
         (
@@ -966,7 +966,7 @@ def test_links_6():
         ''', [[
             ('internal', 'lipsum', (5, 10, 195, 10)),
             ('external', 'https://weasyprint.org/', (0, 10, 200, 10))]],
-        [{'lipsum': (5, 10, 190, 0)}],
+        [{'lipsum': (5, 10, 195, 10)}],
         [([('internal', 'lipsum', (5, 10, 195, 10)),
            ('external', 'https://weasyprint.org/', (0, 10, 200, 10))],
           [('lipsum', 5, 10)])],
@@ -982,7 +982,7 @@ def test_links_7():
                         margin: 10px 5px" id="lipsum">
         ''',
         [[('internal', 'lipsum', (5, 10, 195, 10))]],
-        [{'lipsum': (5, 10, 190, 0)}],
+        [{'lipsum': (5, 10, 195, 10)}],
         [([('internal', 'lipsum', (5, 10, 195, 10))], [('lipsum', 5, 10)])],
         base_url=None)
 
@@ -998,7 +998,7 @@ def test_links_8():
         ''',
         [[('internal', 'lipsum', (0, 0, 200, 15)),
           ('internal', 'missing', (0, 15, 200, 30))]],
-        [{'lipsum': (0, 15, 200, 15)}],
+        [{'lipsum': (0, 15, 200, 30)}],
         [([('internal', 'lipsum', (0, 0, 200, 15))], [('lipsum', 0, 15)])],
         base_url=None,
         warnings=[
@@ -1014,7 +1014,7 @@ def test_links_9():
                 transform: rotate(90deg) scale(2)">
         ''',
         [[('internal', 'lipsum', (30, 10, 70, 210))]],
-        [{'lipsum': (70, 10, 100, 20)}],
+        [{'lipsum': (70, 10, 30, 210)}],
         [([('internal', 'lipsum', (30, 10, 70, 210))], [('lipsum', 70, 10)])],
         round=True)
 
